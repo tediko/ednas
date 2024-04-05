@@ -66,6 +66,14 @@
             font-weight: 500;
             color: $c-black;
         }
+
+        @include breakpoint('md') {
+            transition: color 350ms ease-in-out;
+            
+            &:hover {
+                color: $c-black-50;
+            }
+        }
     }
 
     &__menu {
