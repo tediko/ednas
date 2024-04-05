@@ -78,23 +78,4 @@
         margin-bottom: 1.3125rem;
         max-width: 27.5rem;
     }
-
-    &__link {
-        position: relative;
-        display: flex;
-        text-decoration: none;
-        gap: 0.3125rem;
-        line-height: 1;
-
-        &::after {
-            content: "";
-            display: block;
-            background-image: url("/shared/arrow-icon.svg");
-            background-position: center;
-            background-size: 100%;
-            background-repeat: no-repeat;
-            width: 16px;
-            height: 15px;
-        }
-    }
 }
