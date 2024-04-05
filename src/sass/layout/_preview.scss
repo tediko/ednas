@@ -1,0 +1,74 @@
+@use '../utilities/' as *;
+
+/* Preview */
+.preview {
+    $root: &;
+    padding-top: clamp(1.563rem, 0.852rem + 3.03vw, 3.125rem);
+    padding-bottom: clamp(1.563rem, 0.852rem + 3.03vw, 3.125rem);
+
+    &__video-wrapper {
+        position: relative;
+        margin-bottom: 2.5rem;
+        cursor: pointer;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background-image: url("/shared/play-icon.svg");
+            background-size: 42px;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__image {
+        margin: 0 auto;
+    }
+
+    &__video {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        max-width: 1027px;
+        max-height: 432px;
+        transform: translateX(-50%);
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__desc {
+        text-align: center;
+        margin-bottom: 1.3125rem;
+        max-width: 29.375rem;
+        margin-inline: auto;
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        gap: 0.3125rem;
+
+        &::after {
+            content: "";
+            display: block;
+            background-image: url("/shared/arrow-icon.svg");
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 15px;
+        }
+    }
+}
