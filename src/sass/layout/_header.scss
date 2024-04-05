@@ -1,0 +1,57 @@
+@use '../utilities/' as *;
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    background-color: $bg-primary;
+    gap: 1.25rem;
+
+    @include breakpoint('md') {
+        gap: 0;
+    }
+
+    &__nav {
+        display: none;
+
+        @media (min-width: 32.5rem) {
+            display: block;
+            transition: opacity 400ms ease-in-out;
+        }
+
+        &.on-scroll {
+            opacity: 0;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint('md') {
+            justify-content: unset;
+        }
+    }
+
+    &__item {
+        @include breakpoint('md') {
+            flex: 1;
+        }
+    }
+
+    &__link {
+        @media (min-width: 32.5rem) {
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $c-black;
+        }
+    }
+
+    &__menu {
+        grid-column: 2;
+    }
+}
