@@ -70,6 +70,17 @@ videoWrapper.addEventListener('click', () => {
 }, {once : true})
 
 // ----------------
+// MAKE WHOLE SLIDE CLICKABLE
+// ----------------
+const slides = document.querySelectorAll('[data-slide]');
+slides.forEach(slide => {  
+    let link = slide.querySelector('a');
+    slide.addEventListener('click', () => {
+        link.click();
+    })
+});
+
+// ----------------
 // SWIPER
 // ----------------
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
