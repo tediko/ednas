@@ -7,9 +7,8 @@
 </head>
 <body>
 
-  <div class="grid">
-
-    <header class="header">
+  <header class="header">
+    <div class="header__container" data-header>
       <nav class="header__nav" aria-label="main" data-nav>
         <ul class="header__list">
           <li class="header__item">
@@ -29,8 +28,10 @@
       <button class="header__menu hamburger" type="button" aria-label="toggle menu" aria-expanded="false" data-menu>
         <span class="hamburger__bars"></span>
       </button>
-    </header>
+    </div>
+  </header>
 
+  <div class="grid">
     <main class="kv">
       <div class="kv__logo-wrapper">
         <img class="kv__logo" src="/shared/logo.svg" alt="">
