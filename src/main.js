@@ -53,3 +53,14 @@ const hideNavOnScroll = () => {
 
 // Event listeners
 document.addEventListener('scroll', hideNavOnScroll)
+
+// ----------------
+// VIDEO PLAYER
+// ----------------
+const videoWrapper = document.querySelector('[data-video-wrapper]');
+const videoElement = document.querySelector('[data-video]');
+
+// Event listeners
+videoWrapper.addEventListener('click', () => {
+    videoElement.classList.add('active');
+}, {once : true})
