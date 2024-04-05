@@ -57,10 +57,12 @@
     }
 
     @include breakpoint('md') {
-        transition: gap 350ms ease-in-out;
+        transition: gap 350ms ease-in-out,
+                    color 350ms ease-in-out;
 
         &:hover {
             gap: 0.6rem;
+            color: $c-black-50;
         }
     }
 
