@@ -58,6 +58,10 @@
 
     &__image {
         max-width: 500px;
+
+        @include breakpoint('md') {
+            max-width: 555px;
+        }
     }
 
     &__link {
