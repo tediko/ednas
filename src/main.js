@@ -41,6 +41,7 @@ menuButton.addEventListener('click', () => toggleMenu());
 const navElement = document.querySelector('[data-nav]');
 const headerElement = document.querySelector('[data-header]');
 
+// Hide nav on scroll
 const hideNavOnScroll = () => {
     let offsetScrollY = window.scrollY;
     let triggerOffset = 20;
