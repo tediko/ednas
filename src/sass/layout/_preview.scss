@@ -54,22 +54,6 @@
     }
 
     &__link {
-        position: relative;
-        display: flex;
         justify-content: center;
-        text-decoration: none;
-        gap: 0.3125rem;
-        line-height: 1;
-
-        &::after {
-            content: "";
-            display: block;
-            background-image: url("/shared/arrow-icon.svg");
-            background-position: center;
-            background-size: 100%;
-            background-repeat: no-repeat;
-            width: 16px;
-            height: 15px;
-        }
     }
 }
