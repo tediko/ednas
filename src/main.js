@@ -66,6 +66,7 @@ const videoElement = document.querySelector('[data-video]');
 // Event listeners
 videoWrapper.addEventListener('click', () => {
     videoElement.classList.add('active');
+    videoElement.src += "&autoplay=1";
 }, {once : true})
 
 // ----------------
