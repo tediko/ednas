@@ -4,6 +4,7 @@
 .kv {
     $root: &;
     padding-top: clamp(2rem, -0.203rem + 9.399vw, 5.813rem);
+    padding-bottom: clamp(1.563rem, 0.852rem + 3.03vw, 3.125rem);
 
     &__logo-wrapper {
         display: flex;
