@@ -2,8 +2,8 @@
 To run this project, clone the repository and install it locally:
 
 ```
-$ git clone git@github.com:tediko/art-gallery.git
-$ cd art-gallery
+$ git clone git@github.com:tediko/ednas.git
+$ cd ednas
 $ npm install
 ```
 
