@@ -1,0 +1,26 @@
+@use '../utilities/' as *;
+
+@font-face {
+    font-family: 'PPMori';
+    src: url("/fonts/PPMori-Extralight.otf") format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'PPMori';
+    src: url("/fonts/PPMori-Regular.otf") format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'PPMori';
+    src: url("/fonts/PPMori-SemiBold.otf") format('opentype');
+    font-weight: 600;
+}
+
+body {
+    min-height: 100vh;
+    font-family: $ff-primary;
+    background-color: $bg-primary;
+    overflow-x: hidden;
+}

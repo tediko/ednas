@@ -1,0 +1,18 @@
+/* Colors */
+$c-black: hsl(0, 14%, 18%);
+$c-black-75: hsla(0, 14%, 18%, 0.7);
+
+/* Backgrounds */
+$bg-primary: hsl(0, 0%, 95%);
+
+/* Typography */
+$ff-primary: "PPMori", sans-serif;
+
+/* Media query breakpoints */
+$breakpoints: (
+    xs: 23.5rem,
+    sm: 30.0625rem,
+    md: 48.0625rem,
+    lg: 64rem,
+    xlg: 75rem
+);
