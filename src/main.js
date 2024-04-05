@@ -108,6 +108,7 @@ const imagesSrc = [imageElement1.src, imageElement2.src]
 
 function change() {
     let randomNumber = Math.round(Math.random());
+    
     overlays.forEach(overlay => {
         overlay.classList.add('active');
 
