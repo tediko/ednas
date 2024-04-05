@@ -1,0 +1,70 @@
+@use '../utilities/' as *;
+
+/* Footer */
+.footer {
+    $root: &;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(2rem, 0.068rem + 8.242vw, 6.25rem);
+    margin-top: clamp(1.563rem, 1.066rem + 2.12vw, 2.656rem);
+    padding-top: clamp(1.563rem, 1.066rem + 2.12vw, 2.5rem);
+    padding-bottom: clamp(1.5rem, 0.449rem + 4.485vw, 3.813rem);
+    border-top: 1px solid $c-black-50;
+
+    @include breakpoint('sm') {
+        grid-template-columns: auto 1fr;
+    }
+
+    @include breakpoint('md') {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__logo {
+        margin-bottom: 1.5rem;
+
+        @include breakpoint('md') {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+        text-decoration: none;
+        font-style: normal;
+    }
+
+    &__nav {
+        display: flex;
+        gap: clamp(2rem, -5.045rem + 30.061vw, 17.5rem);
+    }
+
+    &__title {
+        margin-bottom: 1.25rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $c-black;
+        font-weight: 500;
+    }
+
+    &__copy {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        
+        @include breakpoint('sm') {
+            grid-column: span 2;
+        }
+
+        @include breakpoint('md') {
+            justify-content: space-between;
+            flex-direction: row;
+            text-align: left;
+            gap: 0;
+        }
+    }
+}
