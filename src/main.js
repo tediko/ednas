@@ -97,7 +97,3 @@ const swiper = new Swiper(".swiper", {
         prevEl: ".swiper-button-prev"
       }
   });
-  
-  swiper.on('slideChange', () => {
-    console.log('hello');
-  })
