@@ -13,6 +13,10 @@
         gap: clamp(2rem, -10.931rem + 26.904vw, 11.938rem);
         align-items: center;
     }
+
+    @include breakpoint('lg') {
+        align-items: end;
+    }
     
     &__image {
         margin-bottom: 1.3125rem;
