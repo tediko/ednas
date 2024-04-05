@@ -10,8 +10,7 @@ function change() {
 
     overlays.forEach(overlay => {
         overlay.classList.add('active');
-
-        overlay.addEventListener('transitionend', function transition() {
+        const transition = setTimeout(() => {
             if (windowSize < 769) {
                 imageElement1.src = imagesSrc[2];
                 imageElement3.src = imagesSrc[0];
@@ -21,9 +20,8 @@ function change() {
                 imageElement3.src = imagesSrc[0];
             }
             overlay.classList.remove('active');
-
-            overlay.removeEventListener('transitionend', transition);
-        })
+            clearTimeout(transition);
+        }, 500);
     })
 }
 
@@ -38,5 +36,5 @@ window.addEventListener('resize', () => {
 })
 
 export default window.onload = function () {
-    setInterval(change, 4000);
+    setInterval(change, 2000);
 };
