@@ -67,3 +67,23 @@ const videoElement = document.querySelector('[data-video]');
 videoWrapper.addEventListener('click', () => {
     videoElement.classList.add('active');
 }, {once : true})
+
+// ----------------
+// SWIPER
+// ----------------
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+const swiper = new Swiper(".swiper", {
+    loop: false,
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    centeredSlides: false,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
+  });
+  
+  swiper.on('slideChange', () => {
+    console.log('hello');
+  })

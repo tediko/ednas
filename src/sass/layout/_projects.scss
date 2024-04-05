@@ -1,0 +1,56 @@
+@use '../utilities/' as *;
+
+/* Projects */
+.projects {
+    $root: &;
+    padding-top: clamp(1.563rem, 0.852rem + 3.03vw, 3.125rem);
+    padding-bottom: clamp(1.563rem, 0.852rem + 3.03vw, 3.125rem);
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: clamp(1.5rem, 1.045rem + 1.939vw, 2.5rem);
+    }
+
+    &__controls {
+        display: flex;
+        gap: clamp(1rem, 0.886rem + 0.485vw, 1.25rem);
+    }
+
+    &__button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        img {
+            width: clamp(1.5rem, 1.017rem + 2.061vw, 2.563rem);
+        }
+
+        &--left {
+            img {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__swiper {
+        width: 100%;
+    }
+
+    &__slider {
+        display: flex;
+        align-items: end;
+
+    }
+
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        width: 100%;
+    }
+
+    &__image {
+        max-width: 500px;
+    }
+}
