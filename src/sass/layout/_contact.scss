@@ -1,0 +1,61 @@
+@use '../utilities/' as *;
+
+/* Contact */
+.contact {
+    $root: &;
+    display: flex;
+    flex-direction: column;
+    padding-top: clamp(1.563rem, 0.852rem + 3.03vw, 3.125rem);
+    padding-bottom: clamp(1.563rem, 1.066rem + 2.12vw, 2.656rem);
+
+    @include breakpoint('md') {
+        flex-direction: row;
+        gap: clamp(2rem, -10.931rem + 26.904vw, 11.938rem);
+        align-items: center;
+    }
+    
+    &__image {
+        margin-bottom: 1.3125rem;
+        max-height: 400px;
+        object-fit: cover;
+
+        @include breakpoint('md') {
+            margin-bottom: 0;
+            max-height: unset;
+        }
+    }
+
+    &__title {
+        white-space: pre-line;
+        margin-bottom: 1.3125rem;
+
+        & span {
+            @include breakpoint('md') {
+                margin-left: calc(clamp(7.5rem, -11.205rem + 38.917vw, 21.875rem) * -1);
+            }
+        }
+    }
+
+    &__desc {
+        max-width: 23.75rem;
+        margin-bottom: 1.3125rem;
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        text-decoration: none;
+        gap: 0.3125rem;
+
+        &::after {
+            content: "";
+            display: block;
+            background-image: url("/shared/arrow-icon.svg");
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 15px;
+        }
+    }
+}
