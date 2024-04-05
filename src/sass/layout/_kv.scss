@@ -55,9 +55,8 @@
         }
     }
 
-    &__image {
-        height: 100%;
-        object-fit: cover;
+    &__overlay {
+        position: relative;
 
         &:nth-child(2) {
             grid-row: span 2;
@@ -72,6 +71,26 @@
                 grid-row: unset;
             }
         }
+
+        &::after {
+            position: absolute;
+            content: '';
+            inset: 0;
+            background: $bg-primary;
+            opacity: 0;
+            transition: opacity 500ms ease-in-out;
+        }
+
+        &.active {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__image {
+        height: 100%;
+        object-fit: cover;
     }
     
     &__desc {
