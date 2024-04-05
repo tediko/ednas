@@ -49,6 +49,14 @@
         color: $c-black;
         font-weight: 500;
         line-height: 1.4;
+
+        @include breakpoint('md') {
+            transition: color 350ms ease-in-out;
+            
+            &:hover {
+                color: $c-black-50;
+            }
+        }
     }
 
     &__copy {
@@ -72,5 +80,13 @@
     &__copy-link {
         text-decoration: none;
         color: inherit;
+
+        @include breakpoint('md') {
+            transition: color 350ms ease-in-out;
+            
+            &:hover {
+                color: $c-black-50;
+            }
+        }
     }
 }
