@@ -51,7 +51,7 @@
         }
 
         @include breakpoint('md') {
-            grid-template-columns: 1fr auto 1fr;
+            grid-template-columns: auto auto auto;
         }
     }
 
@@ -67,7 +67,7 @@
             }
             
             @include breakpoint('md') {
-                align-self: start;
+                align-self: stretch;
                 grid-row: unset;
             }
         }
