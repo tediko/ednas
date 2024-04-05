@@ -1,0 +1,20 @@
+/* Grid wrapper */ 
+.grid {
+    $gap: clamp(1rem, 0.318rem + 2.909vw, 2.5rem);
+    $full: minmax($gap, 1fr);
+    $content: min(85rem, 100% - $gap * 2);
+    
+    display: grid;
+    grid-template-columns:
+        [full-start] $full
+        [content-start] $content [content-end]
+        $full [full-end];
+
+    & > *:not(.full-width) {
+        grid-column: content;
+    }
+
+    .full-width {
+        grid-column: full;
+    }
+}
