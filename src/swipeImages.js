@@ -38,5 +38,5 @@ window.addEventListener('resize', () => {
 })
 
 export default window.onload = function () {
-    setInterval(change, 2000);
+    setInterval(change, 4000);
 };
