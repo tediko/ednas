@@ -41,13 +41,14 @@
     &__slider {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
+        grid-template-rows: minmax(100px, 160px) minmax(100px, 160px);
         justify-items: center;
         gap: clamp(1rem, 0.886rem + 0.485vw, 1.25rem);
         margin-bottom: 1.875rem;
 
         @include breakpoint('sm') {
             grid-template-columns: 1fr auto;
+            grid-template-rows: auto;
         }
 
         @include breakpoint('md') {
